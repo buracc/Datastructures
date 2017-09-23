@@ -22,7 +22,7 @@ public class Yolo implements DictionaryGenerator {
             list.add(s + lo);
         }
 
-        return list.toArray(new String[0]);
+        return list.toArray(new String[list.size()]);
     }
 
     @Override
