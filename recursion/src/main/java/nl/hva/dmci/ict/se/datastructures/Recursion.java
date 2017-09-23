@@ -9,23 +9,33 @@ public class Recursion implements RijtjesControle {
         return false;
     }
 
+
+
     @Override
     public <T extends Comparable<T>> boolean isStijgend(List<T> rijtje) {
         {
+            int i = 0;
+            int verschil = rijtje.get(i).compareTo(rijtje.get(i + 1));
+
             if (rijtje.size() < 2) {
                 return false;
             }
 
-            int count = 0;
-            int last = (Integer)rijtje.get(count);
-            int next = (Integer)rijtje.get(count + 1);
+            if (rijtje.size() == 2) {
+                if (verschil == -1 || verschil == 0) {
+                    return true;
+                }
+            }
 
-            if (next < last) {
+            if (verschil == 1) {
                 return false;
-            } else if (next > last){
-                rijtje.remove(0);
+            }
+
+            if (verschil == -1) {
+                rijtje.remove(i);
                 return isStijgend(rijtje);
             }
+
             return true;
         }
     }
