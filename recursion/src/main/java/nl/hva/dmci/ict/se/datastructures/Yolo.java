@@ -11,7 +11,7 @@ public class Yolo implements DictionaryGenerator {
         String yo = "yo";
         String lo = "lo";
 
-        if (n == 1){
+        if (n == 1) {
             return new String[] {yo, lo};
         }
 
