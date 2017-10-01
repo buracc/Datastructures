@@ -10,8 +10,8 @@ public class Main {
 
         //Stijgend (Opdracht 1)
         Recursion r = new Recursion();
-        ArrayList<Integer> stijgend = new ArrayList<>(Arrays.asList(1,2,3,4));
-        ArrayList<Integer> niet_stijgend = new ArrayList<>(Arrays.asList(2,3,1,0));
+        ArrayList<Integer> stijgend = new ArrayList<>(Arrays.asList(1));
+        ArrayList<Integer> niet_stijgend = new ArrayList<>(Arrays.asList(2));
         System.out.println(r.isStijgend(stijgend));
         System.out.println(r.isStijgend(niet_stijgend));
 
